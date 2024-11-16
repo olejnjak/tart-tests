@@ -1,0 +1,9 @@
+macos_instance:
+  image: ghcr.io/cirruslabs/macos-runner:sonoma
+
+task:
+  script: |
+    curl https://mise.run | sh
+    mise install
+    mise x -- tuist install
+    mise x -- tuist test -d "iPhone 16 Pro"
