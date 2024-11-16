@@ -4,6 +4,6 @@ macos_instance:
 task:
   script: |
     curl https://mise.run | sh
-    mise install
-    mise x -- tuist install
-    mise x -- tuist test -d "iPhone 16 Pro"
+    ~/.local/bin/mise install
+    ~/.local/bin/mise x -- tuist install
+    ~/.local/bin/mise x -- tuist test -d "iPhone 16 Pro"
